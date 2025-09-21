@@ -1,0 +1,59 @@
+{
+  "name": "EmotionEntry",
+  "type": "object",
+  "properties": {
+    "emotion_text": {
+      "type": "string",
+      "description": "The user's emotional expression"
+    },
+    "detected_emotions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "AI-detected emotions from the text"
+    },
+    "primary_emotion": {
+      "type": "string",
+      "description": "The main emotion detected"
+    },
+    "intensity_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "description": "Intensity of the emotion"
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "AI-generated recommendations"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the entry is anonymous"
+    }
+  },
+  "required": [
+    "emotion_text"
+  ]
+}

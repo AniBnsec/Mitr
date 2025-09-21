@@ -1,0 +1,21 @@
+{
+  "name": "JournalEntry",
+  "type": "object",
+  "properties": {
+    "prompt": {
+      "type": "string",
+      "description": "The AI-generated prompt for the journal entry"
+    },
+    "content": {
+      "type": "string",
+      "description": "The user's written content for the journal"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "ID of the anonymous user"
+    }
+  },
+  "required": [
+    "content"
+  ]
+}
